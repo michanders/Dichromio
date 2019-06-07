@@ -1,0 +1,116 @@
+
+* {
+	margin: auto;
+	font-family: monospace;
+	background: white;
+	overflow: hidden;
+}
+
+header {
+	margin: auto;
+	text-align: center;
+	height: 50px;
+}
+
+header h1, #hLevel {
+	position: relative;
+	display: inline;
+	top: 5px;
+	left: 58px;
+	font-size: 30px;
+}
+
+#hLevel {
+	font-size: 25px;
+	font-weight: bold;
+	left: 120px;
+}
+
+#gamebox {
+	margin: auto;
+	position: relative;
+	width: 500px;
+	height: 500px;
+	border: 2px solid black;
+}
+
+button#spin {
+	margin: auto;
+	position: relative;
+	display: block;
+	width: 504px;
+	height: 50px;
+	bottom: 4px;
+	background: red;
+	color: white;
+	font-size: 25px;
+	border: 4px solid black;
+}
+
+#gamebox div {
+	margin: none;
+	padding: none;
+	width: 96px;
+	height: 96px;
+	border: 2px solid black;
+	display: inline;
+	float: left;
+	background: yellow;
+}
+
+#endgame {
+  margin: auto;
+  background: black;
+  text-align: center;
+  font-size: 30px;
+  width: 500px;
+  height: 150px;
+  color: yellow;
+  position: relative;
+  display: none;
+  bottom: 400px;
+}
+
+@media only screen and (max-device-width: 600px) {
+	
+#gamebox {
+	width: 85%;
+	height: 800px;
+	border: 6px solid black;
+}
+	
+#gamebox div {
+	width: 154.5px;
+	height: 148px;
+	border: 6px solid black;
+}
+
+button#spin {
+	width: 86%;
+	height: 100px;
+	bottom: 6px;
+	font-size: 40px;
+	border: 6px solid black;
+}
+
+header {
+	height: 75px;
+}
+
+header h1, #hLevel {
+	left: 80px;
+	font-size: 55px;
+}
+
+#hLevel {
+	font-size: 35px;
+	left: 200px;
+}
+
+#endgame {
+  font-size: 40px;
+  width: 85%;
+  height: 200px;
+  bottom: 800px;
+}
+}
