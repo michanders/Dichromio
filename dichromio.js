@@ -90,7 +90,7 @@ function nextGame(){
 
 function nextGameDisplay(){
 	ENDGAME.style.display = 'block';
-	ENDGAME.innerHTML = "<br />" + "Nice Job!!!" + "<br />" + "Click for Level: " + level;
+	ENDGAME.innerHTML = "Nice Job!!!" + "<br />" + "Click for Level: " + level;
 	$("#endgame").click(function(){
 		ENDGAME.style.display = 'none';
 		SPIN.style.display = 'block';
