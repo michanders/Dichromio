@@ -2,6 +2,10 @@ const GAMEBOX = document.getElementById('gamebox');
 const SPIN = document.getElementById('spin');
 const ENDGAME = document.getElementById('endgame');
 const HLEVEL = document.getElementById('hLevel');
+const EASY = document.getElementById('easy');
+const MEDIUM = document.getElementById('medium');
+const HARD = document.getElementById('hard');
+var flashTime = 1500;
 var count = 0;
 var level = 1;
 var cdown = 6;
@@ -31,7 +35,7 @@ function blue(obj){
 }
 
 function red(obj){
-	removeGameboxEvent()
+	removeGameboxEvent();
 	obj.style.backgroundColor = 'red';
 	endGame();
 }
@@ -65,12 +69,12 @@ function pickSquare(){
 		if(!flashes.includes(f) && box != null){
 			flashes.push(f);
 			box.style.backgroundColor = 'red';
-			setTimeout(pickSquare, 1000);
-			setTimeout(yellowBack, 500);
+			setTimeout(pickSquare, flashTime);
+			setTimeout(yellowBack, (flashTime/2));
 			break;
 		}
 	}
-	if(flashes.length === level+1){
+	if(flashes.length === (level+1)){
 		setTimeout(addGameboxEvent, 1000);
 	}
 }
@@ -116,6 +120,26 @@ function display() {
 	}
 	ENDGAME.innerHTML = "Game Over!!!" + "<br />" + "Level Reached: " + level + "<br />" + "New Game in... " + cdown;
 }
+
+
+$("#easy").click(function(){
+	flashTime = 1500;
+	EASY.style.border = '4px solid #1bff1b';
+	MEDIUM.style.border = 'none';
+	HARD.style.border = 'none';
+});
+$("#medium").click(function(){
+	flashTime = 1000;
+	EASY.style.border = 'none';
+	MEDIUM.style.border = '4px solid yellow';
+	HARD.style.border = 'none';
+});
+$("#hard").click(function(){
+	flashTime = 500;
+	EASY.style.border = 'none';
+	MEDIUM.style.border = 'none';
+	HARD.style.border = '4px solid red';
+});
 
 
 newGrid();
