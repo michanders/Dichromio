@@ -5,13 +5,14 @@
 
 body {
 	margin: auto;
-	background: white;
+	background-image: url("images/background.png");
 	overflow: hidden;
 }
 
 header {
 	margin: auto;
 	text-align: center;
+	background: white;
 	height: 50px;
 	width: 500px;
 }
@@ -56,6 +57,7 @@ header h1, #hLevel {
 	right: 5px;
 	top: 5px;
 	font-size: 30px;
+	color: black;
 }
 
 #hLevel {
@@ -69,20 +71,23 @@ header h1, #hLevel {
 	position: relative;
 	width: 500px;
 	height: 500px;
-	border: 2px solid black;
+	border: 4px solid black;
 }
 
 button#spin {
 	margin: auto;
 	position: relative;
 	display: block;
-	width: 504px;
-	height: 50px;
-	bottom: 4px;
-	background: black;
-	color: yellow;
+	width: 104px;
+	height: 104px;
+	background: transparent;
+	background-image: url("images/redbutton.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
 	font-size: 25px;
-	border: 4px solid black;
+	font-weight: bold;
+	border: none;
 }
 
 #gamebox div {
@@ -107,7 +112,7 @@ button#spin {
   color: yellow;
   position: relative;
   display: none;
-  bottom: 400px;
+  bottom: 408px;
 }
 
 @media only screen and (max-device-width: 600px) {
@@ -125,11 +130,9 @@ button#spin {
 }
 
 button#spin {
-	width: 86.5%;
-	height: 100px;
-	bottom: 6px;
+	width: 200px;
+	height: 200px;
 	font-size: 40px;
-	border: 6px solid black;
 }
 
 header {
