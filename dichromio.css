@@ -5,7 +5,7 @@
 
 body {
 	margin: auto;
-	background-image: url("images/background.png");
+	background: white;
 	overflow: hidden;
 }
 

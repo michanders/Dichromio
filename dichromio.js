@@ -127,18 +127,24 @@ $("#easy").click(function(){
 	EASY.style.border = '4px solid #1bff1b';
 	MEDIUM.style.border = 'none';
 	HARD.style.border = 'none';
+	document.body.style.background = 'white';
+	GAMEBOX.style.opacity = 1;
 });
 $("#medium").click(function(){
 	flashTime = 1000;
 	EASY.style.border = 'none';
 	MEDIUM.style.border = '4px solid yellow';
 	HARD.style.border = 'none';
+	document.body.style.backgroundImage = "url('images/background.png')";
+	GAMEBOX.style.opacity = 1;
 });
 $("#hard").click(function(){
 	flashTime = 500;
 	EASY.style.border = 'none';
 	MEDIUM.style.border = 'none';
 	HARD.style.border = '4px solid red';
+	document.body.style.backgroundImage = "url('images/background.png')";
+	GAMEBOX.style.opacity = .6;
 });
 
 
